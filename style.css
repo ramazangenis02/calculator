@@ -1,0 +1,135 @@
+/* Global Styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    radial-gradient(
+        at top center,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 120%
+      )
+      #989898;
+  background-blend-mode: multiply, multiply;
+}
+
+/* Calculator Styles */
+.calculator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 900px;
+}
+.calculator-wrapper {
+  background: #efefef;
+  width: 400px;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.screen-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.screen {
+  width: 95%;
+  margin-top: 20px;
+  border: none;
+  height: 50px;
+  background: #0e1111;
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border: 3px solid #414a4c;
+  border-radius: 10px;
+  transition: all 0.1s ease-in-out;
+  overflow: hidden;
+}
+
+.screen:hover {
+  background-color: #232b2b;
+}
+
+.screen span {
+  margin-right: 20px;
+}
+
+.operations {
+  display: flex;
+  justify-content: space-around;
+}
+.operations span {
+  background: #414a4c;
+  padding: 10px;
+  font-size: 24px;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.operations-numbers-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.numbers-wrapper {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.numbers-wrapper span {
+  background: #232b2b;
+  color: #fff;
+  padding: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.1s linear;
+  text-align: center;
+}
+
+.operations-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.operations-wrapper span {
+  padding: 15px;
+  font-size: 30px;
+  background: #232b2b;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.1s linear;
+  text-align: center;
+}
+
+.numbers-wrapper span:hover {
+  background: #414a4c;
+}
+
+.operations-wrapper span:hover {
+  background: #414a4c;
+}
+
+.numbers-wrapper span:active,
+.operations-wrapper span:active {
+  background: #989898;
+}
